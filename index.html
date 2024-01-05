@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>Ritika's Birthday Celebration</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* Add your custom styles here */
+        #timeline-of-memories {
+            background-color: #f8f8f8;
+            padding: 50px 0;
+        }
+
+        .timeline-cards-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline-card {
+            width: 169px; /* Adjust the width to maintain a 16:9 aspect ratio */
+            height: 350px; /* 16:9 aspect ratio */
+            margin: 0 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease-out;
+            border: 6px double #d94c85;
+            border-radius: 15px;
+        }
+        .timeline-cardt {
+            width: 169px; /* Adjust the width to maintain a 16:9 aspect ratio */
+            height: 350px; /* 16:9 aspect ratio */
+            margin: 0 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease-out;
+            border: 6px double #d94c85;
+            border-radius: 15px;
+        }
+        
+        .timeline-cardt video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the entire video is visible within the card */
+        }
+        .video-caption {
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+            pointer-events: none; /* Allow clicking through the caption */
+        }
+        
+        .timeline-card .media-container {
+            flex-grow: 1;
+            overflow: hidden;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio (height divided by width) */
+        }
+        
+        .timeline-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+
+        .timeline-card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            position: relative;
+        }
+
+        .media-container {
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .media-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .date {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .caption {
+            padding: 15px;
+            font-size: 16px;
+            color: #333;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <audio id="background-music" loop>
+        <source src="./Content/audio/raazi.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <div class="header-card">
+        <h1 class="catchy-heading">🎉 Happy Birthday, Ritika! 🎂</h1>
+        <p>Celebrating the awesomeness that is you! 🌟</p>
+    </div>
+    
+    
+    
+    
+    <section id="timeline-of-memories">
+        <h2>Timeline of Memories</h2>
+        <div class="timeline-cards-container">
+            <!-- Item 1 -->
+            <div class="timeline-card">
+                <div class="card-content">
+                    <div class="media-container">
+                        <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.42.42_a334c36f.jpg" alt="Memory 1">
+                    </div>
+                    <div class="date">September 26, 2023</div>
+                    <div class="caption">Chidhaane ke vaaste he sahi pehli photo toh mili</div>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="timeline-card">
+                <div class="card-content">
+                    <div class="media-container">
+                        <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.42.51_169b02ba.jpg" alt="Memory 2">
+                    </div>
+                    <div class="date">October 19, 2023</div>
+                    <div class="caption">Your Ig Story!God!how beautiful she is..</div>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="timeline-card">
+                <div class="card-content">
+                    <div class="media-container">
+                        <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.42.52_4fd5aa7b.jpg" alt="Memory 3">
+                    </div>
+                    <div class="date">November 1, 2023</div>
+                    <div class="caption">Mess, 2nd floor last mei, random pic but that day i felt something special!</div>
+                </div>
+            </div>
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.42.53_4b01732b.jpg" alt="Memory 1">
+          </div>
+          <div class="date">November 5, 2023</div>
+          <div class="caption">M block, when Ritika and Anushka took treat for...ahm!!!</div>
+        </div>
+      </div>
+    
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.42.53_dcb65430.jpg" alt="Memory 1">
+          </div>
+          <div class="date">November 8, 2023</div>
+          <div class="caption">Our first pic saath ki..and in your terms..o bete ki...how cute we look!!</div>
+        </div>
+      </div>
+   
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.42.54_55030adf.jpg" alt="Memory 1">
+          </div>
+          <div class="date">November 13, 2023</div>
+          <div class="caption">Diwali day!aaise rhega koi toh koi paagl kaise naa ho..</div>
+        </div>
+      </div>
+  
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.42.55_eb1cee66.jpg" alt="Memory 1">
+          </div>
+          <div class="date">November 13, 2023</div>
+          <div class="caption">Dekho toh zra..dhyaan se</div>
+        </div>
+      </div>
+   
+
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.42.56_6e0a405c.jpg" alt="Memory 1">
+          </div>
+          <div class="date">November 17, 2023</div>
+          <div class="caption">Agr aaisa koi saath ho toh raat bhr jagkr Cloud project banaane mei kaisii sharam</div>
+        </div>
+      </div>
+  
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.42.57_fb213c30.jpg" alt="Memory 1">
+          </div>
+          <div class="date">November 20, 2023</div>
+          <div class="caption">This is different, something ELSE!</div>
+        </div>
+      </div>
+
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.42.58_cf148ba9.jpg" alt="Memory 1">
+          </div>
+          <div class="date">November 23, 2023</div>
+          <div class="caption">My hoodie suits on you.</div>
+        </div>
+      </div>
+
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.43.00_9e5061b1.jpg" alt="Memory 1">
+          </div>
+          <div class="date">November 28, 2023</div>
+          <div class="caption">Ma'am You're the cutest. Got it?Just look at you!!</div>
+        </div>
+      </div>
+
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.43.01_a7a90550.jpg" alt="Memory 1">
+          </div>
+          <div class="date">December 2, 2023</div>
+          <div class="caption">"tum kabhi bhi meri photos nahi lete ho"<p>-HEINJI?</p></div>
+        </div>
+      </div>
+   
+
+   
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.43.02_038516fc.jpg" alt="Memory 1">
+          </div>
+          <div class="date">December 3, 2023</div>
+          <div class="caption">Officially we are!!!Yay!!</div>
+        </div>
+      </div>
+
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.43.03_75aefd98.jpg" alt="Memory 1">
+          </div>
+          <div class="date">December 5, 2023</div>
+          <div class="caption">Someone taught me kaise palak jhapakte raat beet sakti hai!</div>
+        </div>
+      </div>
+
+
+    
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.43.04_6ade0b4b.jpg" alt="Memory 1">
+          </div>
+          <div class="date">December 25, 2023</div>
+          <div class="caption">Calm Down, babe! You can't slay aaise in a public place!!!!</div>
+        </div>
+      </div>
+  
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.43.05_a02acda1.jpg" alt="Memory 1">
+          </div>
+          <div class="date">January 3, 2024</div>
+          <div class="caption">Meerut is famous for naankathai and....</div>
+        </div>
+      </div>
+
+
+    <div class="timeline-card">
+        <div class="card-content">
+          <div class="media-container">
+            <img src="./Content/Photo&Video/WhatsApp Image 2024-01-05 at 20.45.06_5b66433e.jpg" alt="Memory 1">
+          </div>
+          <div class="date">December 3, 2023</div>
+          <div class="caption">Alpha women in alpha?</div>
+        </div>
+      </div>
+
+
+      <div class="timeline-cardt timeline-card">
+        <div class="card-content">
+            <div class="media-container">
+                <video class="custom-video" loop>
+                    <source src="./Content/Photo&Video/WhatsApp Video 2024-01-05 at 20.42.59_d13aeff1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">No one has ever looked at me in that way, ab toh mai sirf tmhaara hu</div>
+            </div>
+            <div class="date">December 7, 2023</div>
+        </div>
+    </div>
+    
+    <!-- Repeat the structure for other video cards -->
+    
+    <div class="timeline-cardt timeline-card">
+        <div class="card-content">
+            <div class="media-container">
+                <video class="custom-video" controls>
+                    <source src="./Content/Photo&Video/WhatsApp Video 2024-01-05 at 20.45.09_9976bc61.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">her way of saying..."padh lo..jaakr"</div>
+            </div>
+            <div class="date">December 22, 2023</div>
+        </div>
+    </div>
+    
+    <div class="timeline-cardt timeline-card">
+        <div class="card-content">
+            <div class="media-container">
+                <video class="custom-video" controls>
+                    <source src="./Content/Photo&Video/WhatsApp Video 2024-01-05 at 20.45.10_d46f04ac.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">You look cute in that biker jacket(obviously talking to me)</div>
+            </div>
+            <div class="date">December 25, 2023</div>
+        </div>
+    </div>
+    
+
+    </div>
+  </section>
+
+  <section id="my-message-card" class="message-card">
+    <div class="card-content" onclick="openMessage()">
+        <h2>My Message to You</h2>
+        <div class="message">
+            <img src="./QR/Kartikey.png" alt="Your Image">
+        </div>
+    </div>
+</section>
+
+  <section id="reasons-why-you-love-her">
+    <h2>Reasons Why I Love You</h2>
+    <ul>
+        <li>You are Ritika</li>
+        
+        <!-- Add more reasons as needed -->
+    </ul>
+</section>
+<button id="playAudioButton" onclick="playAudio()">Play Audio</button>
+
+    <script src="./script.js"></script>
+
+
+
+<script src="./script.js"></script>
+</body>
+
+</html>

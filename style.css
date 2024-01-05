@@ -1,0 +1,282 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2 {
+    text-align: center; /* Center the text horizontally */
+    margin-top: 0; /* Remove any default margin that might affect vertical alignment */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+.header-card {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    animation: fadeInDown 1s ease-out;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.header-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.catchy-heading {
+    font-size: 2.5em;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+/* Body styles */
+body {
+    background: linear-gradient(-45deg, white, #ffb6c1, white);
+    background-size: 400% 400%;
+    animation: gradientMove 5s infinite;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+/* Header styles */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    animation: fadeInDown 1s ease-out;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1.catchy-heading {
+    font-size: 2.5em;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+/* Section styles */
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Video styles within the card */
+.timeline-cardt video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Heart-shaped icon styles with moving gradient */
+.heart-icon {
+    background: linear-gradient(-45deg, white, #ffb6c1, white);
+    background-size: 400% 400%;
+    animation: gradientMove 5s infinite;
+    width: 100px;
+    height: 90px;
+    background-color: red;
+    position: relative;
+    margin: 20px 0;
+    transform: rotate(-45deg);
+}
+
+.heart-icon::before,
+.heart-icon::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart-icon::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart-icon::after {
+    top: 0;
+    left: 50px;
+}
+
+/* Roses raining effect placeholder (if needed) */
+#rose-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Keyframes for fadeInUp and fadeInDown animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for moving gradient animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* ... (Previous CSS code) ... */
+
+/* Timeline card styles with optimized transitions */
+.timeline-card,
+.timeline-cardt {
+    width: 150px;
+    height: 200px;
+    margin: 0 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    border: 6px double #d94c85;
+    border-radius: 15px;
+}
+
+.timeline-card:hover,
+.timeline-cardt:hover {
+    transform: scale(1.1);
+}
+
+.timeline-card::before,
+.timeline-card::after,
+.timeline-cardt::before,
+.timeline-cardt::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: inherit;
+    z-index: -1;
+    filter: blur(20px);
+}
+
+.timeline-card::before,
+.timeline-cardt::before {
+    left: -5px;
+}
+
+.timeline-card::after,
+.timeline-cardt::after {
+    right: -5px;
+}
+
+/* ... (Remaining CSS code) ... */
+/* Add these styles for the message card */
+
+
+
+.message-card:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Additional styles for the QR code message card */
+/* Additional styles for the message card */
+
+/* Additional styles for the message card */
+
+.message-card {
+    width: 100vw; /* Full width of the viewport */
+    height: 350px; /* Adjusted height to accommodate the image */
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+    border: 6px double #df6797;
+    border-radius: 15px;
+    background-size: 200% 200%; /* Set initial size for the background animation */
+    animation: gradientAnimation 4s infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes gradientAnimation {
+    0% {    
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px; /* Optional: add border-radius to the image */
+}
+
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Rest of the existing styles */
